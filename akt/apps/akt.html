@@ -1,0 +1,106 @@
+<head>
+    <title<AKT</title>
+    <link type="text/css" rel="stylesheet" href="../css/menus.css"/>
+    <style>
+    .akt_widget {
+        display:none; 
+        width:600px; 
+        height:400px; 
+        overflow:auto; 
+        border:solid 1px #808080;
+    }
+    </style>
+    <script type="text/javascript" src="../js/akt.js"></script>
+    <script type="text/javascript" src="../js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui_1.11.4.min.js"></script>
+    <script type="text/javascript" src="../js/tau-prolog.js"></script>
+
+    <!-- Widgets (e.g. AKT System Tools) -->
+    <script type="text/javascript" src="../widgets/jquery.kb_report.js"></script>
+    <script type="text/javascript" src="../widgets/jquery.sentences.js"></script>
+
+    <!-- Core Prolog predicates -->
+    <script type="text/javascript" src="../prolog/akt_operators.js"></script>
+    <script type="text/javascript" src="../prolog/akt_operations.js"></script>
+
+    <!-- Knowledge bases -->
+    <script type="text/javascript" src="../kbs/maetonlaung_short.js"></script>
+    <script type="text/javascript" src="../kbs/ghana_soil.js"></script>
+
+    <script>
+    $(document).ready(function() {
+        AKT.menusClickHandler($('#menus'));
+
+        $('#kb_report1').kb_report({kb_name:'ghana_soil'});
+        $('#sentences1').sentences({kb_name:'ghana_soil'});
+    });
+    </script>
+</head>
+
+<body>
+    <div id="menus">
+        <nav class="menus-menubar">
+        <ul class="">
+
+            <li class="menus-dropdown" onclick="alert('Sorry - not yet implemented');">
+                <a href="#">File</a>
+            </li>
+
+            <li class="menus-dropdown" onclick="alert('Sorry - not yet implemented');">
+                <a href="#">KB</a>
+            </li>
+
+            <li class="menus-dropdown" onclick="alert('Sorry - not yet implemented');">
+                <a href="#">Diagram</a>
+            </li>
+
+            <li class="menus-dropdown"><a href="#" style="color:black;">Tools</a>
+                <ul class="menus-dropdown-menu submenu">
+                    <li class="menus-dropdown submenu" onclick="alert('Sorry - not yet implemented');">
+                        <a href="#">Control Structures ▸ </a>
+                    </li>
+                    <li class="menus-dropdown submenu" onclick="alert('Sorry - not yet implemented');">
+                        <a href="#">Primitives ▸ </a>
+                    </li>
+                    <li class="menus-dropdown submenu"><a href="#" style="color:black;">System Tools ▸ </a>
+                        <ul class="menus-dropdown-menu submenu">
+                            <li class="menus-dropdown submenu" onclick="alert('Sorry - not yet implemented');">
+                                <a href="#">General ▸ </a>
+                            </li>
+                            <li class="menus-dropdown submenu" onclick="alert('Sorry - not yet implemented');">
+                                <a href="#">Hypothesis ▸ </a>
+                            </li>
+                            <li class="menus-dropdown submenu" onclick="alert('Sorry - not yet implemented');">
+                                <a href="#">Knowledge Analysis ▸ </a>
+                            </li>
+                            <li class="menus-dropdown submenu"><a href="#" style="color:black;">Knowledge Evaluation ▸ </a>
+                                <ul class="menus-dropdown-menu submenu">
+                                    <li class="submenu" onclick="$('.akt_widget').css('display','none'); $('#kb_report1').css('display','block'); $('.submenu').hide(); $('html').unbind('click'); $('#kb_report1').kb_report({kb_name:'ghana_soil'});"><a href="#" style="color:black;">kb_report/1</a></li>
+                                    <li class="submenu" onclick="$('.akt_widget').css('display','none'); $('#sentences1').css('display','block'); $('.submenu').hide(); $('html').unbind('click'); $('#sentences1').sentences({kb_name:'ghana_soil'});"><a href="#" style="color:black;">sentences</a></li>
+                                </ul>
+                            </li>
+                            <li class="menus-dropdown submenu" onclick="alert('Sorry - not yet implemented');">
+                                <a href="#">Knowledge Exploration ▸ </a>
+                            </li>
+                            <li class="menus-dropdown submenu" onclick="alert('Sorry - not yet implemented');">
+                                <a href="#">Query ▸ </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menus-dropdown submenu" onclick="alert('Sorry - not yet implemented');">
+                        <a href="#">User Tools ▸ </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="menus-dropdown" onclick="alert('Sorry - not yet implemented');">
+                <a href="#">Help</a>
+            </li>
+
+        </ul>
+        </nav>
+    </div>
+
+    <div id="kb_report1" class="akt_widget"></div>
+    <div id="sentences1" class="akt_widget"></div>
+</body>

@@ -1,0 +1,68 @@
+
+a,
+a:hover{text-decoration: none;}
+
+.menus-menubar{min-height: 25px;
+    margin:0px 1px;
+    padding:0px;
+    font-family: helvetica;
+    font-size:13px;
+    z-index:200000;
+}
+
+.menus-menubar ul{
+  list-style: none;  
+    -webkit-margin-before:0px;
+    -webkit-margin-after:0px;
+    -webkit-margin-start:0px;
+    -webkit-margin-end:0px;
+    -webkit-padding-start:0px;
+    z-index:200000;
+  background-color: #e0e0e0;
+  list-style: none;  
+  margin-left:2px;
+}
+.menus-menubar ul li{
+  background-color: #e0e0e0;
+  display: inline-block;
+    z-index:200000;
+}
+
+.menus-menubar ul li a{
+  display: block;
+  color:red;
+  padding: 2px 5px;
+}
+.menus-menubar ul li a:hover{
+  background-color: #90c090;
+  color:white;
+}
+
+/* menus-dropdown */
+li.menus-dropdown{
+  position: relative;
+}
+
+/* This is the box enclosing the list of menu items */
+ul.menus-dropdown-menu{
+  border:solid 1px #808080;
+  box-shadow: 0px 3px 15px 2px #a0a0a0; 
+  position: absolute;
+  min-width: 120px;
+}
+ul.menus-dropdown-menu li{
+  display: block !important;
+  white-space: nowrap;
+}
+
+/* Sub menus-dropdown */
+ul.menus-dropdown-menu ul.menus-dropdown-menu{
+  left: 100%;
+  top: 0;
+  background-color: #f0f0f0 !important;
+}
+
+/* Display none by Default */
+ul.menus-dropdown-menu{
+  display: none;
+}
